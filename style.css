@@ -1,0 +1,270 @@
+/* font-family: "Roboto", sans-serif;
+font-family: "Anton SC", sans-serif;
+font-family: "Pangolin", sans-serif; */
+*,
+::after::before{
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  background-image: url(images/backgr.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header-top {
+  font-family: "Pangolin", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+}
+
+.menu {
+  margin: 0 auto;
+}
+
+/* делаем из блочного елемента - строчный */
+.menu__list-item {
+  display: inline-block;
+}
+
+.menu__list-item+.menu__list-item {
+  margin-left: 52px;
+}
+
+.header__text {
+  font-size: 35px;
+  font-family: "Pangolin", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  background-color: #172341;
+  margin-top: 115px;
+}
+
+.header__title {
+  font-size: 75px;
+  font-family: "Anton SC", sans-serif;
+  text-align: center;
+  color: #fff;
+  text-shadow: 4px 7px 2px #000;
+  letter-spacing: 5px;
+}
+
+section {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+img.star__lord-img,
+.rocket-img,
+.groot-img {
+  width: 300px;
+  width: 300px;
+  box-shadow: 4px 7px 15px #000;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+
+  0% {
+    transform: perspective(500px) rotateY(0deg);
+  }
+
+  25% {
+    transform: perspective(500px) rotateY(5deg);
+  }
+
+  50% {
+    transform: perspective(500px) rotateY(0deg);
+  }
+
+  75% {
+    transform: perspective(500px) rotateY(-5deg);
+  }
+
+  100% {
+    transform: perspective(500px) rotateY(0deg);
+  }
+}
+
+.title__content {
+  font-size: 45px;
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.title__content span {
+  font-family: "Pangolin", cursive;
+  font-size: 30px;
+}
+
+/*Группируем ОБОРАЧИВАЕМ В DIV с КЛАССОМ content__inner img.star__lord-img,
+.rocet-img.groot-img .content__inner u content__info */
+
+.content__inner {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+/*---------------*/
+
+
+/*---Группируем ОБОРАЧИВАЕМ В DIV с content__info yext__content u .video__coctent----*/
+.content__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/*------------*/
+
+/*----Текст-описание---*/
+.text__content {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  width: 460px;
+}
+
+/*-----------*/
+
+/*----Кнопка-ссылка на видео----*/
+.video__content {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  width: 460px;
+}
+
+/*----------*/
+
+/*----Кнопка-ссылка на видео----*/
+.video__content {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  border: 2px solid #0c3e79;
+  border-radius: 10px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+.video__img {
+  width: 61px;
+}
+
+.video__text {
+  font-family: "Pangolin", cursive;
+  font-size: 18px;
+}
+
+.video__text:hover {
+  color: #33339a;
+}
+
+/*--------------------*/
+
+footer {
+  background-color: #000;
+  margin-top: 100px;
+}
+
+.film__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kids {
+  height: 230px;
+}
+
+.video__button {
+  width: 200px;
+  display: flex;
+  border: 2px solid #fff;
+  justify-content: space-around;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
+
+.ekran__img {
+  height: 190px;
+  padding-right: 10px;
+}
+
+@media(max-widht:900px) {
+  .header-top {
+    background-color: rgba(255, 253, 253, 0.509);
+  }
+
+  .menu__list {
+    text-align: center;
+  }
+  .menu__list-item+.menu__list-item {
+    margin-left: 0;
+}
+
+.menu__list-item {
+  display: block;
+  margin-bottom: 10px;
+}
+  .title__content {
+    text-align: center;
+  }
+
+  .content__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .film__footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kids {
+    margin: 50px 0 30px;
+  }
+
+  .video__button {
+    margin-bottom: 30px;
+  }
+
+  .ekran__img {
+    padding-right: 0px;
+    margin-bottom: 50px;
+  }
+
+}
+
